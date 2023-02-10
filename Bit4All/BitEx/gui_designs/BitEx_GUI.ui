@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainwindow</class>
+ <widget class="QMainWindow" name="mainwindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>753</width>
+    <height>562</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>753</width>
+    <height>562</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#E9F1F7</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="orderbook_label">
+        <property name="styleSheet">
+         <string notr="true">font-family: &quot;Century&quot;;
+font-size: 13pt;
+color: #131B23;</string>
+        </property>
+        <property name="text">
+         <string>ORDER BOOK</string>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QLabel" name="buy_label_orderbook">
+        <property name="styleSheet">
+         <string notr="true">font: 50pt &quot;Century&quot;;
+font-size: 15pt;
+color: #131B23;
+</string>
+        </property>
+        <property name="text">
+         <string>Buy</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="buy_orders_table">
+        <property name="styleSheet">
+         <string notr="true">font-family: &quot;Century&quot;;
+font-size: 12pt;
+color: #131B23;
+background-color:white</string>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustToContents</enum>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <column>
+         <property name="text">
+          <string>amount (BTC)</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>price (USD)</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>total (USD)</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>user</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QLabel" name="sell_label_orderbook">
+        <property name="styleSheet">
+         <string notr="true">font: 50pt &quot;Century&quot;;
+font-size: 15pt;
+color: #131B23;</string>
+        </property>
+        <property name="text">
+         <string>Sell</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="sell_orders_table">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-family: &quot;Century&quot;;
+font-size: 12pt;
+color: #131B23;
+background-color:white</string>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustToContents</enum>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <column>
+         <property name="text">
+          <string>amount (BTC)</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>price (USD)</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>total (USD)</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>user</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QPushButton" name="update_interface_button">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	font-family: &quot;Century&quot;;
+	font-size: 13pt;
+	color: #E7DFC6;
+	background-color:#2274A5;
+	border-radius: 5;
+	height:70 pt;
+}
+
+QPushButton:hover{
+	background-color:#2a8cc7;
+	border-radius: 8
+}</string>
+        </property>
+        <property name="text">
+         <string>UPDATE INTERFACE</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="styleSheet">
+         <string notr="true">font-family: &quot;Century&quot;;
+font-size: 15pt;
+color: #131B23;</string>
+        </property>
+        <property name="text">
+         <string>User panel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tabWidget_2">
+        <property name="styleSheet">
+         <string notr="true">font-family: &quot;Century&quot;;
+font-size: 12pt;
+color: #131B23;
+background-color:white</string>
+        </property>
+        <property name="currentIndex">
+         <number>4</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Wallet</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>Bitcoin :</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="user_btc_balance"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="font">
+               <font>
+                <family>Century</family>
+                <pointsize>12</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>US dollars : </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="user_usd_balance"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>P/L</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>your net profit/loss</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>US Dollars</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLCDNumber" name="usd_profit"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <item>
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>Bitcoin</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLCDNumber" name="btc_profit"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_3">
+         <attribute name="title">
+          <string>Profile</string>
+         </attribute>
+         <widget class="QWidget" name="verticalLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>-1</x>
+            <y>-1</y>
+            <width>371</width>
+            <height>263</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QLabel" name="label_11">
+               <property name="text">
+                <string>first name</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="first_name">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="QLabel" name="label_12">
+               <property name="text">
+                <string>last name</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="last_name">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_10">
+               <property name="text">
+                <string>username</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="username">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_4">
+         <attribute name="title">
+          <string>Open orders</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QTableWidget" name="my_open_orders_table">
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <column>
+             <property name="text">
+              <string>type</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>amount</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>price</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>quote filled</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_5">
+         <attribute name="title">
+          <string>Order history</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QTableWidget" name="my_order_history_table">
+            <property name="styleSheet">
+             <string notr="true">background-color:white</string>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <column>
+             <property name="text">
+              <string>date filled</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>type</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>price</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>amount</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">font-family: &quot;Century&quot;;
+font-size: 15pt;
+color: #131B23;</string>
+        </property>
+        <property name="text">
+         <string>BTC/USD</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGraphicsView" name="graphicsView">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-family: &quot;Century&quot;;
+font-size: 13pt;
+color: #131B23;</string>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <property name="elideMode">
+         <enum>Qt::ElideLeft</enum>
+        </property>
+        <property name="documentMode">
+         <bool>false</bool>
+        </property>
+        <property name="tabsClosable">
+         <bool>false</bool>
+        </property>
+        <property name="movable">
+         <bool>false</bool>
+        </property>
+        <property name="tabBarAutoHide">
+         <bool>false</bool>
+        </property>
+        <widget class="QWidget" name="tab_buy_order">
+         <attribute name="title">
+          <string>BUY</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="amount_buy_order_label">
+              <property name="text">
+               <string>Amount (BTC)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="amount_buy_order">
+              <property name="styleSheet">
+               <string notr="true">background-color: white</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="price_buy_order_label">
+              <property name="text">
+               <string>price (USD)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="price_buy_order">
+              <property name="styleSheet">
+               <string notr="true">background-color:white;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <widget class="QPushButton" name="send_buy_order">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+	font-family:&quot;Century&quot;;
+	font-size: 13pt;
+	color: white;
+	background-color:#549648;
+	border-radius: 5;
+	height:70 pt ;
+}
+
+QPushButton:hover{
+	background-color:#68ba59;
+	border-radius: 8
+}</string>
+              </property>
+              <property name="text">
+               <string>Send order</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_sell_order">
+         <attribute name="title">
+          <string>SELL</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QLabel" name="amount_sell_order_label">
+              <property name="text">
+               <string>Amount (BTC)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="amount_sell_order">
+              <property name="styleSheet">
+               <string notr="true">background-color:white;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLabel" name="price_sell_order_label">
+              <property name="text">
+               <string>price (USD)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="price_sell_order">
+              <property name="styleSheet">
+               <string notr="true">background-color:white;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <widget class="QPushButton" name="send_sell_order">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+	font-family:&quot;Century&quot;;
+	font-size: 13pt;
+	color: white;
+	background-color:#bd0817;
+	border-radius: 5;
+	height:  70 pt;
+}
+
+QPushButton:hover{
+	background-color:#e00417;
+	border-radius: 8
+}</string>
+              </property>
+              <property name="text">
+               <string>Send order</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="order_error_message">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>753</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

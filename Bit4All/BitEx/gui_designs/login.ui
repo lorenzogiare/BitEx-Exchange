@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>486</width>
+    <height>449</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>BitEx - Login</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(233, 241, 247)</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QLabel" name="BitEx_login_title">
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#131B23;
+font: 50pt &quot;Century&quot;;
+margin-left: auto;
+margin-right: auto;
+text-align: center;</string>
+     </property>
+     <property name="text">
+      <string>BitEx </string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="login_form">
+     <property name="styleSheet">
+      <string notr="true">color:#131B23;
+font: 11pt &quot;Century&quot;;
+</string>
+     </property>
+     <property name="title">
+      <string>Login</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="login_error_message">
+        <property name="styleSheet">
+         <string notr="true">font-size:10 pt;
+color: red;
+padding-top: 20 pt;
+padding-bottom: 20 pt;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="username_login_label">
+        <property name="styleSheet">
+         <string notr="true">color:#131B23;
+font: 12pt &quot;Century&quot;;</string>
+        </property>
+        <property name="text">
+         <string>username</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="username_login">
+        <property name="styleSheet">
+         <string notr="true">background-color: white</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="password_login_label">
+        <property name="styleSheet">
+         <string notr="true">color:#131B23;
+font: 12pt &quot;Century&quot;;</string>
+        </property>
+        <property name="text">
+         <string>password</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="password_login">
+        <property name="styleSheet">
+         <string notr="true">background-color: white;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="confirm_login">
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+color:#131B23;
+background-color: #E7DFC6;
+font: 12pt &quot;Century&quot;;
+
+
+
+</string>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item alignment="Qt::AlignHCenter">
+    <widget class="QPushButton" name="go_to_registration_button">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::ClickFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	color: #E7DFC6;
+	font: 14pt &quot;Century&quot;;
+	background-color:#2274A5 ;
+	border-radius:6px;
+	height: 40px;
+	padding-top:20 px;
+	padding-bottom: 20 px;
+	padding-left: 20px;
+	padding-right: 20 px;
+}
+
+QPushButton:hover {
+ 	background-color:#2284A5  ;
+	border-radius: 11px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Register</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

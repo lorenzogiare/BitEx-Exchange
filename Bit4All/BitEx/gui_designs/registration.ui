@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>515</width>
+    <height>488</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BitEx - Registration</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#E9F1F7</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QLabel" name="Registration_label">
+     <property name="styleSheet">
+      <string notr="true">font: 40pt &quot;Century&quot;;
+margin-top: 20px;
+color: #131B23;
+</string>
+     </property>
+     <property name="text">
+      <string>Registration</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="message">
+     <property name="styleSheet">
+      <string notr="true">font: 11 pt &quot;Century&quot;;
+color: red</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string/>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="first_name_label">
+          <property name="styleSheet">
+           <string notr="true">font: 17pt &quot;Century&quot;;
+color: #131B23;</string>
+          </property>
+          <property name="text">
+           <string>first name</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="first_name_register">
+          <property name="styleSheet">
+           <string notr="true">font: 17pt &quot;Century&quot;;
+background-color: white</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="last_name_label">
+          <property name="styleSheet">
+           <string notr="true">font: 17pt &quot;Century&quot;; 
+color: #131B23;</string>
+          </property>
+          <property name="text">
+           <string>last name</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="last_name_register">
+          <property name="styleSheet">
+           <string notr="true">font: 17pt &quot;Century&quot;;
+background-color: white</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="username_label">
+          <property name="styleSheet">
+           <string notr="true">font: 17pt &quot;Century&quot;;
+color: #131B23;</string>
+          </property>
+          <property name="text">
+           <string>username</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="username_register">
+          <property name="styleSheet">
+           <string notr="true">font: 17pt &quot;Century&quot;;
+background-color: white</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="password_label">
+          <property name="styleSheet">
+           <string notr="true">font: 17pt &quot;Century&quot;;
+color: #131B23;</string>
+          </property>
+          <property name="text">
+           <string>password</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="password_register">
+          <property name="styleSheet">
+           <string notr="true">font: 17pt &quot;Century&quot;;
+background-color: white</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="password_label_2">
+          <property name="styleSheet">
+           <string notr="true">font: 17pt &quot;Century&quot;;
+color: #131B23;</string>
+          </property>
+          <property name="text">
+           <string>repeat password</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="password_register_2">
+          <property name="styleSheet">
+           <string notr="true">font: 17pt &quot;Century&quot;;
+background-color: white</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="confirm_registration">
+     <property name="styleSheet">
+      <string notr="true">font: 13pt &quot;Century&quot;;
+font-style: bold;
+background-color: #E7DFC6;
+height:27 px;
+color: #131B23;</string>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="go_to_login_button">
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 16pt &quot;Century&quot;;
+margin-left: 40 px;
+margin-right: 40 px;
+margin-top: 10px;
+height: 40px;
+padding-top:20 px;
+padding-bottom: 20 px;
+padding-left: 20px;
+padding-right: 20 px;
+background-color: #2274A5;
+border-radius: 5 ;
+color: #E7DFC6;
+
+}
+
+QPushButton:hover{
+	background-color: #2284A5;
+	border-radius: 8;
+}</string>
+     </property>
+     <property name="text">
+      <string>Go to Login</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
